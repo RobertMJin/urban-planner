@@ -7,7 +7,7 @@ const vectorStore = await embedDocument("https://en.wikipedia.org/wiki/Outline_o
 
 
 async function llmQuery(prompt) {
-	const retriever = vectorStore.asRetriever();	
+	const retriever = vectorStore.asRetriever();
 	const retrievedDocs = await retriever.invoke(prompt);
 	return await LLM.invoke("Here is the context: " + retrievedDocs + " Here is the question: " + prompt);
 }

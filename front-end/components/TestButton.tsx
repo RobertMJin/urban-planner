@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const ButtonWithClick: React.FC = () => {
   const sendHelloWorld = () => {
-    axios.get('/api/api_tester').then((res) => {
+    axios.post('/api/text_prompt_api', {message: "What is a fish"}).then((res) => {
       console.log(res.data);
     });
   };
