@@ -5,7 +5,7 @@ import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { OpenAIEmbeddings } from "@langchain/openai";
 
 
-async function embedDocument(documentLink) {
+export async function embedDocument(documentLink) {
 	const loader = new CheerioWebBaseLoader(documentLink);
 	const docs = await loader.load();    
 	const textSplitter = new RecursiveCharacterTextSplitter({
@@ -20,3 +20,4 @@ async function embedDocument(documentLink) {
 
 	return vectorStore;
 }
+
