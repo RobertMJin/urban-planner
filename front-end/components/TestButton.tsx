@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const ButtonWithClick: React.FC = () => {
   const sendHelloWorld = () => {
-    axios.get('/api/request_handler').then((res) => {
+    axios.get('/api/api_tester').then((res) => {
       console.log(res.data);
     });
   };
